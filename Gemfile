@@ -71,3 +71,7 @@ group :test do
   gem 'selenium-webdriver'
 end
 gem 'devise', '~> 4.2'
+
+gem 'draper'
+gem 'tailwindcss-rails', '~> 2.4'
+gem 'view_component'
