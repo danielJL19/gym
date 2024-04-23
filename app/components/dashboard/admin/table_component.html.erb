@@ -8,5 +8,7 @@
               <% end %>
             </tr>
         </thead>
-        <%= render partial: @url_body, collection: @data, as: :user %>
+        <tbody>
+          <%= render partial: @url_body, collection: @data, as: :user %>
+        </tbody>
     </table>
