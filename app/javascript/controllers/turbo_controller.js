@@ -9,14 +9,15 @@ export default class extends Controller {
   click(e){
     e.preventDefault();
     //obtenemos la url de ese link
-    var url = this.element.getAttribute('href')
+    this.url = this.element.getAttribute('href')
     //hacemos una peticion via fetch y que nos responda mediante un turbo_stream
     fetch(this.url,{
       headers: {
         Accept: "text/vnd.turbo-stream.html"
       }
     })
-    .then(r=> r.text())
-    .then(html => Turbo.renderStreamMessage(html) )
+    .then(r => r.text())
+    .then(html => Turbo.renderStreamMessage(html))
+    
   }
 }
