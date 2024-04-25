@@ -6,9 +6,15 @@ class Dashboard::Admin::RegistrationsController < DashboardController
   def create_user
     @user = User.new(params_user)
     if @user.save
-      redirect_to dashboard_admin_users_path, notice: 'Se ha creado con éxito'
+      respond_to do |format|
+        format.turbo_stream do
+          render turbo_stream: turbo_stream.prepend('users', partial: 'dashboard/admin/users/table/body',
+                                                             locals: { user: @user })
+        end
+        format.html { redirect_to dashboard_admin_users_path, notice: 'Se ha creado con éxito' }
+      end
     else
-      render :new, status: :unprocessable_entity
+      render :new_user, status: :unprocessable_entity
     end
   end
 
