@@ -8,7 +8,9 @@
               <% end %>
             </tr>
         </thead>
-        <tbody>
-          <%= render partial: @url_body, collection: @data, as: :user %>
+        <tbody id="users">
+          <% @data.each do |user| %>
+            <%= render partial: @url_body, locals: {user: user.object} %>
+          <% end %>
         </tbody>
     </table>

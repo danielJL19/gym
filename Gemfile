@@ -75,3 +75,5 @@ gem 'devise', '~> 4.2'
 gem 'draper'
 gem 'tailwindcss-rails', '~> 2.4'
 gem 'view_component'
+
+gem 'rails-i18n'
