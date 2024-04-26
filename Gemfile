@@ -73,6 +73,7 @@ end
 gem 'devise', '~> 4.2'
 
 gem 'draper'
+gem 'pagy', '~> 8.3'
 gem 'tailwindcss-rails', '~> 2.4'
 gem 'view_component'
 
