@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   draw :admin_routes
   draw :user_routes
+  draw :shared_routes
 end

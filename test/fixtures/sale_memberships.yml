@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1
+  status: MyString
+  buy_order: MyString
+  session_id: MyString
+  transaction_date: 2024-05-06
+  user: one
+  membership_payment: one
+
+two:
+  amount: 1
+  status: MyString
+  buy_order: MyString
+  session_id: MyString
+  transaction_date: 2024-05-06
+  user: two
+  membership_payment: two
