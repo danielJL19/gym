@@ -1,0 +1,11 @@
+<h1>HOLA</h1>
+
+<form action="https://webpay3gint.transbank.cl/webpayserver/initTransaction" name="form" method='post'>
+  <input type="hidden" name="token_ws" value="<%= @key %>" />
+
+</form>
+<script>
+  window.onload = function(){
+    document.form.submit();
+  }
+</script>
