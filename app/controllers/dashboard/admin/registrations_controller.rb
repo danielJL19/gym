@@ -11,10 +11,7 @@ class Dashboard::Admin::RegistrationsController < DashboardController
         format.turbo_stream do
           render turbo_stream: [
             turbo_stream.prepend('users', partial: 'dashboard/admin/users/table/body',
-                                          locals: { user: @user.decorate }),
-            turbo_stream.update('section_table', render(Dashboard::Admin::TableComponent.new(data: @users,
-                                                                                             header: UserDecorator.new(@users).options_header,
-                                                                                             url_body: 'dashboard/admin/users/table/body')))
+                                          locals: { user: @user.decorate })
           ]
         end
         format.html { redirect_to dashboard_admin_users_path, notice: 'Se ha creado con éxito' }
