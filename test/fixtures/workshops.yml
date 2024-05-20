@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  user: one
+  schedule: MyString
+  size: 1
+  location: MyString
+  start_time: 2024-05-19
+  end_time: MyString
+  price: 1
+  category: 1
+
+two:
+  name: MyString
+  user: two
+  schedule: MyString
+  size: 1
+  location: MyString
+  start_time: 2024-05-19
+  end_time: MyString
+  price: 1
+  category: 1

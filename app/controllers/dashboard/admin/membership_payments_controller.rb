@@ -1,7 +1,7 @@
 class Dashboard::Admin::MembershipPaymentsController < DashboardController
   before_action :user_find
   def index
-    @membership_payments = @user.payment_months.decorate
+    @membership_payments = @user.payment_months.order(start_pay: :asc).decorate
   end
 
   private
