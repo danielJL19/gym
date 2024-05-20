@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :payment_months, class_name: 'MembershipPayment'
   has_many :sale_memberships
+  has_many :workshops
+
   validates :first_name, presence: true
   validates :last_name, presence: true
 
@@ -14,6 +16,8 @@ class User < ApplicationRecord
   private
 
   def create_membership_payment
+    return unless rol == 1
+
     1.upto(12) do |i|
       MembershipPayment.create(
         user_id: id,

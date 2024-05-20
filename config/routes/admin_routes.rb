@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       post '/create_user', to: 'registrations#create_user'
 
       get '/user_membership_payment/:id', to: 'membership_payments#index', as: :membership_payments
+
+      resources :workshops, only: %i[index new]
     end
   end
 end

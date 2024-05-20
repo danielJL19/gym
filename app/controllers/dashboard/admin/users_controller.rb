@@ -1,6 +1,6 @@
 class Dashboard::Admin::UsersController < DashboardController
   def index
-    @users = User.all.offset(1).limit(8).order(created_at: :desc).order(updated_at: :desc).decorate
+    @users = User.all.offset(1).order(created_at: :desc).order(updated_at: :desc).decorate
   end
 
   # after_create :add_membership_payment
